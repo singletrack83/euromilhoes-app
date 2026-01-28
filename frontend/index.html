@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EuroMilhoes - Sistema de Apostas Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>EuroMilhoes</h1>
+            <p class="subtitle">Sistema de Apostas Online</p>
+        </header>
+
+        <!-- Formulario de Aposta -->
+        <div class="bet-form">
+            <h2>Registar Nova Aposta</h2>
+            
+            <!-- ID da Conta CrediBank -->
+            <div class="form-group">
+                <label for="accountId">ID da Conta CrediBank:</label>
+                <input type="text" id="accountId" placeholder="Ex: 123456789" required>
+                <small>Sera debitado 10 creditos da sua conta</small>
+            </div>
+
+            <!-- Numeros -->
+            <div class="form-group">
+                <label>Escolha 5 numeros (1-50):</label>
+                <div class="numbers-grid" id="numbersGrid"></div>
+                <div class="selected-numbers">
+                    <strong>Numeros selecionados:</strong>
+                    <div id="selectedNumbers" class="badges"></div>
+                </div>
+            </div>
+
+            <!-- Estrelas -->
+            <div class="form-group">
+                <label>Escolha 2 estrelas (1-12):</label>
+                <div class="stars-grid" id="starsGrid"></div>
+                <div class="selected-numbers">
+                    <strong>Estrelas selecionadas:</strong>
+                    <div id="selectedStars" class="badges"></div>
+                </div>
+            </div>
+
+            <!-- Botao -->
+            <button id="btnBet" class="btn-primary">
+                Registar Aposta (10 creditos)
+            </button>
+
+            <!-- Loading -->
+            <div id="loading" class="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>A processar aposta...</p>
+            </div>
+
+            <!-- Mensagem de Feedback -->
+            <div id="feedback" class="feedback" style="display: none;"></div>
+        </div>
+
+        <!-- Informacoes -->
+        <div class="info-box">
+            <h3>Como funciona?</h3>
+            <ol>
+                <li>Insira o ID da sua conta CrediBank</li>
+                <li>Escolha 5 numeros entre 1 e 50</li>
+                <li>Escolha 2 estrelas entre 1 e 12</li>
+                <li>Clique em "Registar Aposta"</li>
+            </ol>
+            <p><strong>Custo:</strong> 10 creditos por aposta</p>
+            <p><strong>Nota:</strong> O sistema contacta automaticamente o CrediBank para emitir o cheque digital e o EuroMilRegister para registar a aposta.</p>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Integracao de Sistemas - 2025/2026</p>
+            <p>Powered by gRPC + Node.js</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
